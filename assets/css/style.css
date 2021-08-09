@@ -1,0 +1,259 @@
+/* FUENTES */
+@font-face {
+    font-family: 'fajala';
+    src: url(../fonts/fuente.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, helvetica, arial;
+    text-decoration: none;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+body{
+    background: url(../img/cubes.png) #f4f4f4;
+}
+
+#header{
+    width: 85%;
+    height: auto;
+    background: transparent;
+    margin: 0px auto;
+}
+
+#logo{
+    float: left;
+    width: 540px;
+    height: 110px;
+}
+
+/* LOGOTIPO */
+
+#logo a{
+    font-family: "fajala", helvetica;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #2979CD;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    transition: all 500ms;
+    line-height: 90px;
+    margin-left: 10px;
+}
+#logo a:hover{
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+}
+
+/* MENU */
+
+#nav{
+    clear: both;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px  #ccc;
+    overflow: hidden;
+}
+#nav ul{
+    list-style: none;
+}
+#nav ul li{
+    float: left;
+    line-height: 47px;
+    border-right: 1px solid #e6e6e6;
+}
+#nav ul li a{
+    display: block;
+    padding: 0px 10px;
+    font-size: 15px;
+    color: #838282;
+}
+#nav ul li a:hover{
+    background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+}
+
+/* CONTENIDO */
+
+#container{
+    width: 85%;
+    height: auto;
+    /* min-height: 900px; */
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* BARRA LATERAL */
+
+#sidebar{
+    float: right;
+    width: 27%;
+    height: auto;
+    /* min-height: 550px; */
+}
+
+.block-aside{
+    display: block;
+    width: 90%;
+    margin: 0px auto;
+    margin-bottom: 35px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 0px 1px #ffffff inset, 0px -3px 2px rgba(0,0,0,0.25) inset; 
+}
+
+.block-aside h3{
+    margin-bottom: 15px;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="button"],
+.btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    display: block;
+    border-radius: 2px;
+    color: white;
+    padding: 7px;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+}
+
+/* BOTONES */
+.btn{
+    text-align: center;
+    width: 130px;
+}
+.btn-success{
+    background: green;
+    border-color: rgba(0, 128, 0, 0);
+}
+.btn-warning{
+    background: orange;
+    border-color: rgba(255, 166, 0, 0);
+}
+.btn-danger{
+    background: red;
+    border-color: rgba(255, 0, 0, 0);
+}
+
+.date-article{
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+#main{
+    float: left;
+    width: 65%;
+    min-height: 568px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-left: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#main h1{
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #ccc;
+    font-family: "fajala", Helvetica;
+}
+
+#main h2{
+    font-size: 20px;
+    color: #2979CD;
+    text-shadow: 2px 2px 2px #ccc;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    font-family: "fajala", Helvetica;
+}
+
+#main p{
+    margin-top: 8px;
+    color: #333;;
+}
+
+.ver-todas a{
+    display: block;
+    border-radius: 2px;
+    padding: 10px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+
+/* PIE DE PAGINA */
+
+#foot{
+    clear: both;
+    width: 85%;
+    margin: 0px auto;
+    border: 1px solid #c9c9c9;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border-radius: 8px 8px 0px 0px;
+    color: #666;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ALERT MESSAGE */
+
+.alert{
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background: green;
+    box-shadow: 1px 2px 3px #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.alert-danger{
+    background: #E3342F;
+}
+.alert-success{
+    background: #38C172;
+}
+.alert-warning{
+    background: #FFA500;
+}
