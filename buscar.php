@@ -1,7 +1,7 @@
 <?php
 
 
-    if(!isset($_POST['texto'])){
+    if(empty($_POST['texto'])){
         header('Location: index.php');
     }
 
