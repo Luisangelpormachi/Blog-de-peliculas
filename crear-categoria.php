@@ -17,7 +17,7 @@
                     <label for="nombre">Nombre de categoria</label>
                     <input type="text" name="nombre">
                     <?= isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : '';?>
-                    <input type="submit" value="Agregar">    
+                    <input class="btn" type="submit" value="Agregar">    
                 </form>
                 <?php borrarAlerts(); ?>      
             </div> <!-- FIN PRINCIPAL -->

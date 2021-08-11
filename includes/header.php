@@ -39,10 +39,10 @@
                     endif;
                     ?>
                     <li>
-                        <a href="index.php">Sobre mi</a>
+                        <a href="nosotros.php">Sobre mi</a>
                     </li>
                     <li>
-                        <a href="index.php">Contacto</a>
+                        <a href="contacto.php">Contacto</a>
                     </li>
                 </ul>
             </nav>

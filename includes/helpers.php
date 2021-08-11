@@ -3,7 +3,7 @@
     function mostrarError($session, $campo){
         $alert = '';
         if(isset($session[$campo]) && !empty($campo)){
-            $alert = "<div class='alert alert-danger'>".$session[$campo]."</div>";
+            $alert = "<div class='alert alert-danger ocultar'>".$session[$campo]."</div>";
         }
 
         return $alert;
@@ -63,6 +63,11 @@
             $_SESSION['campos_login'] = null;
             $borrado = true;
         }
+
+        if(isset($_SESSION['message'])){
+            $_SESSION['message'] = null;
+            $borrado = true;
+        }
         
         return $borrado;
     }
@@ -94,13 +99,17 @@
         return $resultado;
     }
 
-    function getEntradas($connection, $limit = null, $categoria = null){
+    function getEntradas($connection, $limit = null, $categoria = null, $texto = null){
 
         $sql = "SELECT e.*, c.nombre AS categoria FROM entradas e ".
                "INNER JOIN categoria c ON e.categoria_id = c.id ";
                
         if(!empty($categoria)){
             $sql .= "WHERE e.categoria_id = $categoria ";
+        }
+
+        if(!empty($texto)){
+            $sql .= "WHERE e.titulo like '%$texto%' OR e.descripcion like '%$texto%'";
         }
 
         $sql .= "ORDER BY e.id DESC ";
@@ -131,7 +140,7 @@
 
         //consulta para los registros con usuarios existentes
 
-        $sql = "SELECT e.*, c.nombre AS categoria, u.nombre AS 'nombre', u.apellidos AS 'apellidos' FROM entradas e ".
+        $sql = "SELECT e.*, c.nombre AS categoria, CONCAT(u.nombre ,' ', u.apellidos) AS nombres FROM entradas e ".
                "INNER JOIN categoria c ON e.categoria_id = c.id ".
                "INNER JOIN usuarios u ON e.usuario_id = u.id ".
                "WHERE e.id = $id";

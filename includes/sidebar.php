@@ -3,6 +3,16 @@
 <!-- BARRA LATERAL -->
 <aside id="sidebar">
 
+    <div id="buscador" class="block-aside">
+        
+        <h3>Buscar</h3>
+        <form action="buscar.php" method="post">
+           
+            <input type="text" name="texto">
+            <input  class="btn" type="submit" name="buscar" value="buscar">
+        </form>
+    </div>
+
     <?php if(isset($_SESSION['usuario'])):?>
         <div id="usuario-logueado" class="block-aside">    
             <h3>Bienvenido, <?= $_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'] ?></h3>
@@ -16,12 +26,12 @@
 
     <?php if(!isset($_SESSION['usuario'])):?>
 
-    <div id="login.php" class="block-aside">
+    <div id="login" class="block-aside">
     
         <h3>Identificate</h3>
 
         <?php if(isset( $_SESSION['error_login'])): ?>
-            <div class="alert alert-danger">
+            <div class="alert alert-danger ocultar">
                 <?=  $_SESSION['error_login'] ?>
             </div>
         <?php endif; ?>
@@ -33,19 +43,19 @@
             <label for="password">Contraseña</label>
             <input type="password" name="password">
 
-            <input type="submit" name="entrar" value="Entrar">
+            <input  class="btn" type="submit" name="entrar" value="Entrar">
         </form>
     </div>
     <div id="register" class="block-aside">
 
         <?php if(isset($_SESSION['completado'])) :?>
-            <div class="alert alert-success"><?= $_SESSION['completado'] ?></div>
+            <div class="alert alert-success ocultar"><?= $_SESSION['completado'] ?></div>
 
         <?php elseif(isset($_SESSION['errores']['general'])) :?>
-            <div class="alert alert-danger"><?= $_SESSION['errores']['general'] ?></div>
+            <div class="alert alert-danger ocultar"><?= $_SESSION['errores']['general'] ?></div>
 
         <?php elseif(isset($_SESSION['errores']['email_found'])) :?>
-            <div class="alert alert-danger"><?= $_SESSION['errores']['email_found'] ?></div>
+            <div class="alert alert-danger ocultar"><?= $_SESSION['errores']['email_found'] ?></div>
 
         <?php endif; ?>
     
@@ -72,7 +82,7 @@
             <input type="password" name="password_confirm" value="<?= isset($_SESSION['campos_register']['password_confirm']) ? mostrarCampo($_SESSION['campos_register'], 'password_confirm') : ''; ?>">
             <?= isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'password_confirm') : '';?>
 
-            <input type="submit" name="submit" value="Registrar">
+            <input class="btn" type="submit" name="submit" value="Registrar">
         </form>
         <?php borrarAlerts(); ?>
     </div>

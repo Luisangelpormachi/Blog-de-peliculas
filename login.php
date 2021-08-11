@@ -44,8 +44,9 @@
     }
 
     //redirigir al index
-    header('location: index.php');
-
+    
+    // header('location: index.php');
+    header('Location:' . getenv('HTTP_REFERER')); 
 
 
 

@@ -14,12 +14,12 @@
 
                 ?>
 
-                <article class="entrada">
+                <article class="entrada mb">
                     <a href="entrada.php?id=<?= $entrada['id'] ?>">
                         <h2><?= $entrada['titulo'] ?></h2>
                         <span class="date-article"><?= $entrada['categoria'].' | '.$entrada['fecha'] ?></span>
                         <p>
-                        <?= substr($entrada['descripcion'], 0, 130).'...'?>
+                        <?= $entrada['descripcion'] ?>
                         </p> 
                     </a>
                 </article>
@@ -30,7 +30,7 @@
                 ?>
 
                 <div class="ver-todas">
-                    <a href="index.php">Ultimas entradas</a>
+                    <a class="btn" href="index.php">Ultimas entradas</a>
                 </div>
             </div> <!-- FIN PRINCIPAL -->
 

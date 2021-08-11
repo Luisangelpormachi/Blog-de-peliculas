@@ -33,7 +33,7 @@
                     <input type="text" name="email" value="<?= $_SESSION['usuario']['email'] ?>">
                     <?= isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'email') : '';?>
 
-                    <input type="submit" name="submit" value="Actualizar">
+                    <input class="btn" type="submit" name="submit" value="Actualizar">
                 </form>
                 <?php borrarAlerts(); ?>
     

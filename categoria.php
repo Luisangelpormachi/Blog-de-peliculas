@@ -16,7 +16,7 @@ if(!isset($categoria_actual['id'])){
             <!-- CONTENIDO PRINCIPAL -->
             <div id="main">
 
-                <h1>Entradas de <?= $categoria_actual['nombre'] ?></h1>
+                <h1 class="text-center my">Entradas de <?= $categoria_actual['nombre'] ?></h1>
 
                 <?php 
                 $entradas = getEntradas($connection, null, $_GET['id']);

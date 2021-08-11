@@ -20,7 +20,8 @@
 }
 
 body{
-    background: url(../img/cubes.png) #f4f4f4;
+    background-image: url(../img/cubes.png) ;
+  
 }
 
 #header{
@@ -81,6 +82,7 @@ body{
 #nav ul li a:hover{
     background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
 }
+
 
 /* CONTENIDO */
 
@@ -148,10 +150,35 @@ input[type="button"],
     cursor: pointer;
 }
 
+/* input[type="submit"]:hover,
+input[type="button"]:hover{
+    opacity: 0.85;
+    transform:scale(1.02);
+} */
+
+
 /* BOTONES */
 .btn{
     text-align: center;
     width: 130px;
+    font-size: 14px;
+    color: white;
+    box-shadow: 1px 2px 3px #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+.btn:hover{
+    box-shadow: 2px 2px 4px 1px rgba(204, 204, 204, 0.658);
+    opacity: 0.85;
+    transform:scale(1.02);
+}
+.btn-primary{
+    background: rgba(31, 120, 236, 0.925);
+    border-color: rgba(36, 122, 161, 0.904);
+}
+.btn-secondary{
+    background: rgb(92, 116, 138);
+    border-color: rgb(53, 82, 107);
 }
 .btn-success{
     background: green;
@@ -220,6 +247,10 @@ input[type="button"],
     margin-top: 70px;
     text-align: center;
 }
+/* .ver-todas:hover{
+        opacity: 0.85;
+        transform:scale(1.02);    
+} */
 
 /* PIE DE PAGINA */
 
@@ -256,4 +287,99 @@ input[type="button"],
 }
 .alert-warning{
     background: #FFA500;
+}
+
+
+/*SECCION NOSOTROS*/
+
+.seccion-nosotros{
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.seccion-nosotros h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px 0px;
+}
+
+.seccion-nosotros p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+}
+
+/*SECCION CONTACTO*/
+
+.seccion-contacto{
+    background: #e4e4e4;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    
+}
+
+.seccion-contacto h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.seccion-contacto p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.left{
+    float: left;
+    padding: 15px;
+    margin: 15px;
+}
+
+.right{
+    float: right;
+}
+
+
+.mapa iframe{
+    border: none;
+    width: 390px;
+    height: 350px ;
+}
+
+@media (max-width: 1349px){
+
+    .left{
+        float: none;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .right{
+        float: none;
+        padding: 20px;
+        margin: 20px;
+    }
+
+}
+
+
+/* EXTRAS - PARA HACER ESPACIOS */
+
+
+.my{
+    margin: 5px;
+}
+.mt{
+    margin-top: 30px;
+}
+.mb{
+    margin-bottom: 25px;
+}
+.text-center{
+    text-align: center;
+}
+textarea{
+    min-width: 810px;
+    max-width: 810px;
+    min-height: 100px;
+    max-height: 100px;
 }

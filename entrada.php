@@ -23,8 +23,13 @@ if(!isset($entrada_actual[0]['id'])){
                     <h2><?= $entrada_actual[0]['categoria'] ?></h2>
                 </a>
 
-                <span class="date-article"><?= $entrada_actual[0]['fecha'] ?> | <?= isset($entrada_actual[1]) ? $entrada_actual[1]['nombre'].' '.$entrada_actual[1]['apellidos'] : 'Sin autor'?></span>
+                <span class="date-article"><?= $entrada_actual[0]['fecha'] ?> | <?= isset($entrada_actual[1]) ? $entrada_actual[1]['nombres'] : 'Sin autor'?></span>
                 <p><?= $entrada_actual[0]['descripcion'] ?></p>
+
+                <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['id']  == $entrada_actual[0]['usuario_id']):?>
+                        <a href="editar-entradas.php?id=<?= $entrada_actual[0]['id'] ?>" class="btn btn-warning mt">Editar</a>
+                        <a href="borrar-entradas.php?id=<?= $entrada_actual[0]['id'] ?>" class="btn btn-danger">Eliminar</a>
+                <?php endif; ?>
 
             </div> <!-- FIN PRINCIPAL -->
 

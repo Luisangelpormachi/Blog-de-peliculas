@@ -98,11 +98,12 @@ if(isset($_POST['submit'])){
     
     $_SESSION['campos_register'] = $campos;
     $_SESSION['errores'] = $errores;
-    header('location: index.php');
 
     }
 
-    header('location: index.php');
+    // header('location: index.php');
+    header('Location:' . getenv('HTTP_REFERER')); 
+
 }
 
 ?>

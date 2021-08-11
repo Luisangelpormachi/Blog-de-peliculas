@@ -32,22 +32,43 @@ if(isset($_POST)){
     //insertar datos
     if(count($errores) == 0){
 
-        $sql = "INSERT INTO entradas VALUES(NULL, $usuario, '$categoria', '$titulo', '$descripcion', CURDATE());";
-        $ejecutar = mysqli_query($connection, $sql);
-        
+        if(isset($_GET['editar'])){
+
+            $id_entrada = $_GET['editar'];
+            $id_usuario = $_SESSION['usuario']['id'];
+
+            $sql = "UPDATE  entradas SET titulo = '$titulo', descripcion = '$descripcion',  categoria_id = $categoria WHERE id = $id_entrada  AND usuario_id = $id_usuario";
+            $ejecutar = mysqli_query($connection, $sql);
+
+            $_SESSION['message'] = "Actualizado correctamente";
+            header("Location: editar-entradas.php?id=".$_GET['editar']);
+
+        }else{
+            $sql = "INSERT INTO entradas VALUES(NULL, $usuario, '$categoria', '$titulo', '$descripcion', CURDATE());";
+            $ejecutar = mysqli_query($connection, $sql);
+
+            $_SESSION['message'] = "Agregado correctamente";
+            header('location: index.php');
+        }
+    
         
 
     }else{
         $_SESSION['campos_entradas'] = $campos;
         $_SESSION['errores_entradas'] = $errores;
-        header("Location: crear-entradas.php");
-        die();
+
+        if(isset($_GET['editar'])){
+            header("Location: editar-entradas.php?id=".$_GET['editar']);
+        }else{
+            header("Location: crear-entradas.php");
+        }
+        
     }
 
 }
 
 
-header('location: index.php');
+
 
 
 ?>
