@@ -46,4 +46,5 @@
 </html>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="assets/js/main.js" type="text/javascript"></script><?php borrarAlerts(); ?>
+<script src="assets/js/main.js" type="text/javascript"></script>
+<?php borrarAlerts(); ?>

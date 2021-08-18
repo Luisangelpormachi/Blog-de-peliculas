@@ -2,7 +2,7 @@
 
 if(isset($_POST)){
     
-    require_once 'includes/connection.php';
+    require_once '../includes/connection.php';
 
     $titulo = isset($_POST["titulo"]) ? mysqli_real_escape_string($connection, $_POST["titulo"]) : false;
     $descripcion = isset($_POST["titulo"]) ? mysqli_real_escape_string($connection, $_POST["descripcion"]) : false;
@@ -41,14 +41,14 @@ if(isset($_POST)){
             $ejecutar = mysqli_query($connection, $sql);
 
             $_SESSION['message'] = "Actualizado correctamente";
-            header("Location: editar-entradas.php?id=".$_GET['editar']);
+            header("Location: ../editar-entradas.php?id=".$_GET['editar']);
 
         }else{
             $sql = "INSERT INTO entradas VALUES(NULL, $usuario, '$categoria', '$titulo', '$descripcion', CURDATE());";
             $ejecutar = mysqli_query($connection, $sql);
 
             $_SESSION['message'] = "Agregado correctamente";
-            header('location: index.php');
+            header('location: ../index.php');
         }
     
         
@@ -58,9 +58,9 @@ if(isset($_POST)){
         $_SESSION['errores_entradas'] = $errores;
 
         if(isset($_GET['editar'])){
-            header("Location: editar-entradas.php?id=".$_GET['editar']);
+            header("Location: ../editar-entradas.php?id=".$_GET['editar']);
         }else{
-            header("Location: crear-entradas.php");
+            header("Location: ../crear-entradas.php");
         }
         
     }

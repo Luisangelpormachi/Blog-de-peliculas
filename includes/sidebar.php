@@ -19,7 +19,7 @@
             <a href="crear-entradas.php" class="btn btn-success">Crear entradas</a>
             <a href="crear-categoria.php" class="btn">Crear categoria</a>
             <a href="mis-datos.php" class="btn btn-warning">Mis datos</a>
-            <a href="close.php" class="btn btn-danger">Cerrar sesion</a>
+            <a href="actions/close.php" class="btn btn-danger">Cerrar sesion</a>
         </div>
     <?php endif; ?>
 
@@ -36,7 +36,7 @@
             </div>
         <?php endif; ?>
 
-        <form action="login.php" method="post">
+        <form action="actions/login.php" method="post">
             <label for="email">Email</label>
             <input type="email" name="email" value="<?= isset($_SESSION['campos_login']['email']) ? $_SESSION['campos_login']['email'] : ''; ?>">
 
@@ -60,7 +60,7 @@
         <?php endif; ?>
     
         <h3>Registrate</h3>
-        <form action="register.php" method="post">
+        <form action="actions/register.php" method="post">
 
             <label for="nombre">Nombres</label>
             <input type="text" name="nombre" value="<?= isset($_SESSION['campos_register']['nombre']) ? mostrarCampo($_SESSION['campos_register'], 'nombre') : ''; ?>">

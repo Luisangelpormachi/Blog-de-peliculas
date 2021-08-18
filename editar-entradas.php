@@ -1,5 +1,5 @@
 <?php
-require_once 'redireccion.php';
+require_once 'actions/redireccion.php';
 require_once 'includes/connection.php';
 require_once 'includes/helpers.php';
 
@@ -31,7 +31,7 @@ elseif(($entrada_actual[0]['usuario_id']) != ($_SESSION['usuario']['id'])){
 
                 <?php endif; ?>
 
-                <form action="guardar-entradas.php?editar=<?= $entrada_actual[0]['id']?> " method="POST">
+                <form action="actions/guardar-entradas.php?editar=<?= $entrada_actual[0]['id']?> " method="POST">
                     <label for="titulo">Titulo de entrada</label>
                     <input type="text" name="titulo" value="<?= isset($_SESSION['campos_entradas']['titulo']) ? $_SESSION['campos_entradas']['titulo'] : $entrada_actual[0]['titulo'] ;?>">
                     <?= isset($_SESSION['errores_entradas']) ? mostrarError($_SESSION['errores_entradas'], 'titulo') : '';?>
@@ -66,5 +66,4 @@ elseif(($entrada_actual[0]['usuario_id']) != ($_SESSION['usuario']['id'])){
 </html>
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="assets/js/main.js" type="text/javascript"></script><?php borrarAlerts(); ?>
-
+<script src="assets/js/main.js" type="text/javascript"></script>

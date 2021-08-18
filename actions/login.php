@@ -1,6 +1,6 @@
 <?php
     //importar la conexion que tambien ya contiene el session start
-    require_once 'includes/connection.php';
+    require_once '../includes/connection.php';
 
     //comprobamos si existe datos en POST 
     if(isset($_POST)){

@@ -2,14 +2,14 @@
 
             <?php require_once 'includes/sidebar.php';?>
 
-            <?php require_once 'redireccion.php';?>
+            <?php require_once 'actions/redireccion.php';?>
 
             <!-- CONTENIDO PRINCIPAL -->
             <div id="main">
                 <h1>Crear Entradas</h1>
                 <p>Agrega nuevas Entradas al blog para que los usuarios puedan leer mas contenido</p>
                 <br>
-                <form action="guardar-entradas.php" method="POST">
+                <form action="actions/guardar-entradas.php" method="POST">
                     <label for="titulo">Titulo de entrada</label>
                     <input type="text" name="titulo" value="<?= isset($_SESSION['campos_entradas']['titulo']) ? $_SESSION['campos_entradas']['titulo'] : '';?>">
                     <?= isset($_SESSION['errores_entradas']) ? mostrarError($_SESSION['errores_entradas'], 'titulo') : '';?>
@@ -40,3 +40,6 @@
 
     </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>

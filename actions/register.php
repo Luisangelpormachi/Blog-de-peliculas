@@ -4,7 +4,7 @@
 if(isset($_POST['submit'])){
 
     //incluir connexion
-    require_once 'includes/connection.php';
+    require_once '../includes/connection.php';
 
     //iniciar session el
     if(!isset($_SESSION)){
@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
     }
 
     // header('location: index.php');
-    header('Location:' . getenv('HTTP_REFERER')); 
+    header('Location: ../index.php#login'); 
 
 }
 

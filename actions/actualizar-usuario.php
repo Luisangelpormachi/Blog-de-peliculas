@@ -4,7 +4,7 @@
 if(isset($_POST['submit'])){
 
     //incluir connexion
-    require_once 'includes/connection.php';
+    require_once '../includes/connection.php';
 
     
     //recogienndo los valores del formulario de registro
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $nombre = isset($_POST['nombre']) ? mysqli_real_escape_string($connection, $_POST['nombre']) : false;
     $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($connection, $_POST['apellidos']) : false;
     $email = isset($_POST['email']) ? mysqli_real_escape_string($connection, $_POST['email']) : false;
-    $usuario = $_SESSION['usuario']['id'];
+    $usuario = $_SESSION['usuario'];
 
     //validar los campos de registros
 
@@ -61,7 +61,7 @@ if(isset($_POST['submit'])){
         if($resultado['id'] == $usuario['id'] || empty($resultado)){
 
             //insertar usuario a la base de datos
-            $sql = "UPDATE usuarios SET nombre = '$nombre', apellidos = '$apellidos',  email = '$email' WHERE id = '$usuario'";
+            $sql = "UPDATE usuarios SET nombre = '$nombre', apellidos = '$apellidos',  email = '$email' WHERE id =".$usuario['id'];
             $ejecutar = mysqli_query($connection, $sql);
 
             if($ejecutar){
@@ -77,6 +77,7 @@ if(isset($_POST['submit'])){
             }
 
         }else{
+            
             $_SESSION['errores']['general'] = "Email registrado!!";
         }
 
@@ -85,11 +86,11 @@ if(isset($_POST['submit'])){
     }else{
     
     $_SESSION['errores'] = $errores;
-    header('location: mis-datos.php');
 
-    }
-
-    header('location: mis-datos.php');
+    }  
 }
+
+header('location: ../mis-datos.php');
+
 
 ?>

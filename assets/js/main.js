@@ -5,3 +5,5 @@ $(document).ready(function() {
         $(".ocultar").fadeOut(1200);
     },1200);
 });
+
+

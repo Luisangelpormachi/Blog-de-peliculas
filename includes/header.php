@@ -6,8 +6,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Blog de videos</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog de peliculas</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">      
+        <script defer src="https://kit.fontawesome.com/93ef79ad81.js" crossorigin="anonymous"></script>
+        <script defer src="assets/js/main2.js" type="text/javascript"></script>
     </head>
     <body>
 
@@ -18,9 +22,13 @@
                 <a href="index.php">
                     Blog de peliculas
                 </a>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>  
             </div>
             <!-- MENU -->
-            <nav id="nav">   
+            <nav class="nav"> 
+                
                 <ul>
                     <li>
                         <a href="index.php">Inicio</a>

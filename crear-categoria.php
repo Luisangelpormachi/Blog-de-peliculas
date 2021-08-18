@@ -2,7 +2,7 @@
 
             <?php require_once 'includes/sidebar.php';?>
 
-            <?php require_once 'redireccion.php';?>
+            <?php require_once 'actions/redireccion.php';?>
 
             <!-- CONTENIDO PRINCIPAL -->
             <div id="main">
@@ -11,7 +11,7 @@
                 <br>
                 <form action="guardar-categoria.php" method="POST">
                     <?php if(isset($_SESSION['completado'])): ?>
-                       <div class="alert alert-success"><?= $_SESSION['completado'] ?></div>
+                       <div class="alert alert-success ocultar"><?= $_SESSION['completado'] ?></div>
                     <?php endif; ?>
                     <?= isset($_SESSION['errores']['general']) ? $_SESSION['errores']['general'] : '';?>
                     <label for="nombre">Nombre de categoria</label>
@@ -26,3 +26,6 @@
 
     </body>
 </html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>

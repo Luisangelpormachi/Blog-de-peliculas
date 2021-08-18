@@ -1,6 +1,6 @@
 <?php
 
-require_once 'includes/connection.php';
+require_once '../includes/connection.php';
 
 
 if(isset($_SESSION['usuario']) && isset($_GET['id'])){
@@ -26,6 +26,6 @@ if(isset($_SESSION['usuario']) && isset($_GET['id'])){
     }
 
 }
-header('location: index.php');
+header('location: ../index.php');
 
 ?>

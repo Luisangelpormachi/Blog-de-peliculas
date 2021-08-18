@@ -53,4 +53,3 @@ if(!isset($categoria_actual['id'])){
 
     </body>
 </html>
-

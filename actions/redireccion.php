@@ -5,9 +5,7 @@ if(!isset($_SESSION)){
 }
 
 if(!isset($_SESSION['usuario'])){
-     header('location: index.php');
+     header('location: ../index.php');
 }
-
-
 
 ?>
