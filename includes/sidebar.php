@@ -3,7 +3,7 @@
 <!-- BARRA LATERAL -->
 <aside id="sidebar">
 
-    <div id="buscador" class="block-aside">
+    <div id="buscador-normal" class="block-aside">
         
         <h3>Buscar</h3>
         <form action="buscar.php" method="post">

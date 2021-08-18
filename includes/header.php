@@ -56,4 +56,15 @@
             </nav>
             <div class="clearfix"></div>
         </header>
+
+        <div id="buscador-responsive" class="block-aside">
+        
+                <h3>Buscar</h3>
+                <form action="buscar.php" method="post">
+                
+                    <input type="text" name="texto">
+                    <input  class="btn" type="submit" name="buscar" value="buscar">
+                </form>
+        </div>
+
         <div id="container">

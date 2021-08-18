@@ -404,9 +404,10 @@ textarea{
     display: none;
 }
 
-.aside-responsive{
+#buscador-responsive{
     display: none;
 }
+
 
 @media (max-width: 768px){
 
@@ -504,6 +505,8 @@ textarea{
     /* CONTENIDO */
     
     #container{
+        display: flex;
+        flex-flow: row wrap-reverse;
         width: 100%;
         height: auto;
         /* min-height: 900px; */
@@ -518,9 +521,19 @@ textarea{
         float: none;
         width: 100%;
         height: auto;
+        margin-top: 30px;
         /* min-height: 550px; */
     }
-    
+
+    #buscador-normal{
+        display: none;
+    }
+
+    #buscador-responsive{
+        display: block;
+        margin-top: 130px;
+    }
+
     .block-aside{
         display: block;
         width: none;
@@ -619,13 +632,13 @@ textarea{
     
     #main{
         float: none;
-        width: 100%;
+        width: 90%;
+        margin: 0px auto;
+
         min-height: auto;
         background: white;
         border-radius: 5px;
         box-shadow: 0px 0px 5px #ccc;
-        margin-left: 0px;
-        margin-top: 20px;
         padding: 20px;
         overflow: hidden;
     }
@@ -812,16 +825,8 @@ textarea{
     .nav-menu_visible{
         left: 0;
     }
-    #login{
-        display: block;
-    }
-    #register{
-        display: block;
-    }
-    #buscador{
-        margin-top: 125px;
-        display: block;
-    }
+    
+    
     
     
 
