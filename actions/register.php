@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
     }
 
     // header('location: index.php');
-    header('Location: ../index.php#login'); 
+    header('Location:' . getenv('HTTP_REFERER').'#register');
 
 }
 
