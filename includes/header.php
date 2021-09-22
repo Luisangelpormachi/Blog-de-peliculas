@@ -8,8 +8,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Blog de peliculas</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">      
+
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/img/favicon.png">     
+      
         <script defer src="https://kit.fontawesome.com/93ef79ad81.js" crossorigin="anonymous"></script>
         <script defer src="assets/js/main2.js" type="text/javascript"></script>
     </head>
